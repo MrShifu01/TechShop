@@ -5,12 +5,15 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import connectDB from './config/db.js'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
+import cookieParser from 'cookie-parser'
+
 const PORT = process.env.PORT || 3001
 
 connectDB() // Connect to DB
 const app = express()
 
-// Body Parser Middleware
+// Parser Middleware
+app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
