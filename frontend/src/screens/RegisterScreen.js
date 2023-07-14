@@ -61,7 +61,7 @@ const RegisterScreen = () => {
           <Form.Group controlId='name' className='my-3'>
           <Form.Label>Name</Form.Label>
             <Form.Control
-            type='name'
+            type='text'
             placeholder='Enter name'
             value={name}
             onChange={(ev) => setName(ev.target.value)}
@@ -91,7 +91,7 @@ const RegisterScreen = () => {
           <Form.Group controlId='password' className='my-3'>
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
-            type='confirmPassword'
+            type='password'
             placeholder='Confirm Password'
             value={confirmPassword}
             onChange={(ev) => setConfirmPassword(ev.target.value)}
