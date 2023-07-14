@@ -5,7 +5,10 @@ import Message from '../../components/Message'
 import Loader from '../../components/Loader'
 import FormContainer from '../../components/FormContainer'
 import { toast } from 'react-toastify'
-import { useUpdateProductMutation, useGetProductDetailsQuery } from "../../slices/productsApiSlice"
+import { useUpdateProductMutation, 
+    useGetProductDetailsQuery, 
+    useUploadProductImageMutation 
+} from "../../slices/productsApiSlice"
 
 const ProductEditScreen = () => {
     const { id: productId } = useParams()
@@ -24,6 +27,7 @@ const ProductEditScreen = () => {
     const navigate = useNavigate()
 
     const [updateProduct, {isLoading: loadingUpdate}] = useUpdateProductMutation()
+    const [uploadProductImage, {isLoading: loadingUpload}] = useUploadProductImageMutation()
 
     useEffect(() => {
         if(product) {
