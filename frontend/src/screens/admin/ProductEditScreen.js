@@ -63,6 +63,18 @@ const ProductEditScreen = () => {
         }
     }
 
+    const handleUploadFile = async (ev) => {
+        const formData = new FormData()
+        formData.append('image', ev.target.files[0])
+        try {
+            const res = await uploadProductImage(formData).unwrap()
+            toast.success('Image Uploaded')
+            setImage(res.image)
+        } catch (error) {
+            toast.error(error?.data?.message || error.message)
+        }
+    }
+
   return (
     <>
         <Link to='/admin/productlist' className="btn btn-light my-3">
@@ -98,7 +110,19 @@ const ProductEditScreen = () => {
                         ></Form.Control>
                     </Form.Group>
 
-                    {/* IMAGE INPUT PLACEHOLDER */}
+                    <Form.Group controlId='image' className="my-2">
+                        <Form.Label>Image</Form.Label>
+                        <Form.Control type="text"
+                        placeholder="Enter Image URL"
+                        value={image}
+                        onChange={(ev) => setImage()}
+                        ></Form.Control>
+                        <Form.Control
+                        type="file"
+                        label='Choose File'
+                        onChange={handleUploadFile}
+                        ></Form.Control>
+                    </Form.Group>
 
                     <Form.Group controlId='brand' className="my-2">
                         <Form.Label>Brand</Form.Label>
