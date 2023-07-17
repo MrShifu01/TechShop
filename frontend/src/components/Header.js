@@ -32,8 +32,8 @@ const Header = () => {
     return (
         <header>
             <Navbar 
-            bg='dark' 
-            variant='dark'
+            bg='primary' 
+            variant='primary'
             expand='md'
             collapseOnSelect
             >
@@ -48,7 +48,7 @@ const Header = () => {
                         <Nav className='ms-auto'>
                             <SearchBox/>
                             <LinkContainer to='/cart'>
-                                <Nav.Link><FaShoppingCart/>Cart
+                                <Nav.Link className='text-light'><FaShoppingCart className='me-1'/>Cart
                                 {
                                     cartItems.length > 0 && (
                                         <Badge pill bg="success" style={{marginLeft: "5px"}}>
@@ -59,7 +59,7 @@ const Header = () => {
                                 </Nav.Link>
                             </LinkContainer>
                             { userInfo 
-                            ? (<NavDropdown title={userInfo.name} id='username'>
+                            ? (<NavDropdown style={{color: 'white'}} title={userInfo.name} id='username'>
                                     <LinkContainer to='/profile'>
                                         <NavDropdown.Item>
                                             Profile
@@ -80,7 +80,7 @@ const Header = () => {
                             }
 
                             {userInfo && userInfo.isAdmin && (
-                                <NavDropdown title='Admin' id="adminmenu">
+                                <NavDropdown className='text-light' title='Admin' id="adminmenu">
                                     <LinkContainer to='/admin/productlist'>
                                         <NavDropdown.Item>Products</NavDropdown.Item>
                                     </LinkContainer>

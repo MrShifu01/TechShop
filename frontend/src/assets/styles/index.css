@@ -6,6 +6,10 @@ main {
   width: 100px;
 }
 
+.navitem {
+  color: #fff;
+}
+
 .rating span {
   margin: 0.1rem;
 }

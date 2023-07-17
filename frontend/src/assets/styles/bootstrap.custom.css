@@ -6,7 +6,7 @@
  */
 :root,
 [data-bs-theme='light'] {
-  --bs-blue: #3c4c5d;
+  --bs-blue: #303d4a;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -29,7 +29,7 @@
   --bs-gray-700: #7b8a8b;
   --bs-gray-800: #7b8a8b;
   --bs-gray-900: #7b8a8b;
-  --bs-primary: #3c4c5d;
+  --bs-primary: #303d4a;
   --bs-secondary: #7b8a8b;
   --bs-success: #18bc9c;
   --bs-info: #3498db;
@@ -4073,7 +4073,7 @@ fieldset:disabled .btn {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-navbar-color);
+  --bs-nav-link-color: #f4f4f4;
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;
