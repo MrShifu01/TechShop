@@ -28,7 +28,7 @@ const LoginScreen = () => {
       if(userInfo) {
         navigate(redirect)
       }
-    }, [userInfo, redirect])
+    }, [userInfo, redirect, navigate])
 
     const handleSubmit = async (ev) => {
         ev.preventDefault()
