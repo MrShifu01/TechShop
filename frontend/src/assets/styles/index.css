@@ -62,5 +62,5 @@ table th {
 .carousel-image {
   width: 100%;
   max-height: 400px;
-  object-fit: cover;
+  object-fit: scale-down;
 }

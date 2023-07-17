@@ -54,14 +54,14 @@ const LoginScreen = () => {
           <Form.Label>Email</Form.Label>
             <Form.Control
             type='email'
-            placeholder='Enter Email'
+            placeholder='admin@email.com'
             value={email}
             onChange={(ev) => setEmail(ev.target.value)}
             ></Form.Control>
           </Form.Group>
 
           <Form.Group controlId='password' className='my-3'>
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Password (123456)</Form.Label>
             <Form.Control
             type='password'
             placeholder='Enter Password'
@@ -78,6 +78,19 @@ const LoginScreen = () => {
         <Row className='py-3'>
           <Col>
             New Customer? <Link to={ redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2>Demo Accounts</h2>
+            <hr className='w-100 m-auto mb-2'/>
+            <h5>Admin</h5>
+            <p><strong>Email:</strong> admin@email.com</p>
+            <p><strong>Password:</strong> 123456</p>
+            <hr className='w-100 m-auto mb-2'/>
+            <h5>User</h5>
+            <p><strong>Email:</strong> john@email.com</p>
+            <p><strong>Password:</strong> 123456</p>
           </Col>
         </Row>
     </FormContainer>
